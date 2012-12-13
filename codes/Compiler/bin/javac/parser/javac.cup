@@ -1,0 +1,307 @@
+package javac.parser;
+
+import java.io.InputStream;
+import javac.absyn.*;
+
+action code {:
+    static javac.symbol.Symbol sym(String s) {
+        return javac.symbol.Symbol.valueOf(s);
+    }
+    
+    static javac.util.Position pos(int line, int column) {
+        return javac.util.Position.valueOf(line, column);
+    }
+:};
+
+parser code {:
+    public void reportError(String message, Object info) {
+        final StringBuffer m = new StringBuffer("Parsing error");
+        if (info instanceof java_cup.runtime.Symbol) {
+            final java_cup.runtime.Symbol s = (java_cup.runtime.Symbol) info;
+            if (s.left >= 0) {
+                m.append(" in line " + (s.left + 1));
+                if (s.right >= 0) {
+                    m.append(", column " + (s.right + 1));
+                }
+            }
+        }
+        m.append(" : " + message);
+        System.err.println(m);
+    }
+    
+    public void reportFatalError(String message, Object info) {
+        reportError(message, info);
+        System.exit(1);
+    }
+    
+    public Parser(InputStream inStream) {
+        this(new Yylex(inStream));
+    }
+:};
+
+terminal            NATIVE, RECORD, NEW, INT, STRING, CHAR, NULL, IF, ELSE, WHILE, FOR, RETURN, BREAK, CONTINUE;
+terminal            SEMICOLON, LBRACE, RBRACE, LPAREN, RPAREN, COMMA, LBRACKET, RBRACKET, LRBRACKET, ASSIGN, OR, AND;
+terminal            EQ, NEQ, LESS, LESS_EQ, GREATER, GREATER_EQ, PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, NOT, DOT;
+terminal Integer    INTEGER;
+terminal String     ID, STRING_LITERAL;
+terminal Character  CHARACTER;
+non terminal TranslationUnit   translation_unit;
+non terminal ExternalDecl	   external_decl;
+non terminal PrototypeDecl 	   prototype_decl;
+non terminal FunctionDef       function_def;
+non terminal RecordDef  	   record_def;
+non terminal VariableDeclList  variable_decl_list;
+non terminal FunctionHead      function_head;
+non terminal ParameterList     parameter_list;
+non terminal ParameterDecl     parameter_decl;
+non terminal VariableDecl      variable_decl;
+non terminal TypeSpecifier     type_specifier;
+non terminal IdList            id_list;
+non terminal StmtList          stmt_list;
+non terminal Stmt              stmt;
+non terminal CompoundStmt      compound_stmt;
+non terminal ExprStmt          expr_stmt;
+non terminal IfStmt            selection_stmt;
+non terminal Stmt              for_stmt;
+non terminal Stmt              while_stmt;
+non terminal Stmt              break_stmt;
+non terminal ReturnStmt        return_stmt;
+non terminal ContinueStmt      continue_stmt;
+non terminal Expr              expr;
+non terminal Expr              assignment_expr, logical_or_expr, logical_and_expr;
+non terminal Expr              equality_expr, relational_expr, additive_expr;
+non terminal Expr              mult_expr;
+non terminal Expr              unary_expr;
+non terminal Expr              postfix;
+non terminal Expr              primary;
+
+
+precedence right  ELSE;
+precedence left   LBRACKET;
+
+start with translation_unit;
+
+translation_unit ::= external_decl:e	{: RESULT = new TranslationUnit(pos(eleft, eright)); RESULT.add(e); :}
+                   | translation_unit:t external_decl:e	{: RESULT = t; t.add(e); :}
+                   ;
+                
+external_decl ::= prototype_decl:p	{: RESULT = p; :}
+                | function_def:f	{: RESULT = f; :}
+                | record_def:r	{: RESULT = r; :}
+                ;
+                
+
+prototype_decl ::= NATIVE:n function_head:f SEMICOLON	{: RESULT = new PrototypeDecl(pos(nleft, nright), f); :};
+
+function_def ::= function_head:f LBRACE   variable_decl_list:v stmt_list:s RBRACE	{: RESULT = new FunctionDef(pos(fleft, fright), f, v, s); :}
+               | function_head:f LBRACE                      stmt_list:s RBRACE	{: RESULT = new FunctionDef(pos(fleft, fright), f, null, s); :}
+               | function_head:f LBRACE                      			 RBRACE	{: RESULT = new FunctionDef(pos(fleft, fright), f, null, null); :}
+               ;
+
+
+
+record_def ::= RECORD:r ID:i LBRACE variable_decl_list:v RBRACE	{: RESULT = new RecordDef(pos(rleft, rright), sym(i), v); :}
+             ;
+
+variable_decl_list ::= variable_decl:v	{: RESULT = new VariableDeclList(pos(vleft, vright)); RESULT.add(v); :}
+                     | variable_decl_list:l variable_decl:v	{: RESULT = l; l.add(v); :}
+                     ;
+
+function_head ::= type_specifier:t ID:i LPAREN parameter_list:l RPAREN
+                  {: RESULT = new FunctionHead(pos(tleft,tright),t,sym(i),l); :} 
+              | type_specifier:t ID:i LPAREN                RPAREN
+                {: RESULT = new FunctionHead(pos(tleft,tright),t,sym(i),new ParameterList(pos(ileft,iright))); :}
+              ;
+
+parameter_list ::= parameter_decl:d
+               {: RESULT = new ParameterList(pos(dleft,dright)); RESULT.add(d); :};
+parameter_list ::= parameter_list:l COMMA parameter_decl:d
+                   {: RESULT = l; l.add(d); :};
+
+parameter_decl ::= type_specifier:t ID:i
+                   {: RESULT = new ParameterDecl(pos(tleft,tright),t,sym(i)); :};
+
+variable_decl ::= type_specifier:t id_list:l SEMICOLON
+                  {: RESULT = new VariableDecl(pos(tleft,tright),t,l); :};
+
+type_specifier ::= INT:i
+                   {: RESULT = new IntType(pos(ileft,iright)); :}
+               | STRING:s
+                 {: RESULT = new StringType(pos(sleft,sright)); :}
+               | CHAR:c
+                 {: RESULT = new CharType(pos(cleft,cright)); :}
+               | ID:i
+                 {: RESULT = new IdType(pos(ileft,iright),sym(i)); :}
+               ;
+type_specifier ::= type_specifier:t LRBRACKET
+                   {: RESULT = new ArrayType(pos(tleft,tright),t); :}
+                   ;
+
+id_list ::= ID:i
+            {: RESULT = new IdList(pos(ileft,iright)); RESULT.add(sym(i)); :}
+            ;
+id_list ::= id_list:l COMMA ID:i
+            {: RESULT = l; l.add(sym(i)); :}
+            ;
+
+stmt_list ::= stmt:s
+              {: RESULT = new StmtList(pos(sleft,sright)); RESULT.add(s); :} 
+              ;
+                
+stmt_list ::= stmt_list:l stmt:s
+              {: RESULT = l; l.add(s); :}
+              ;
+
+stmt ::= compound_stmt:s {: RESULT = s; :}
+     | expr_stmt:s {: RESULT = s; :}
+     | selection_stmt:s {: RESULT = s; :}
+     | while_stmt:s {: RESULT = s; :}
+     | for_stmt:s {: RESULT = s; :}
+     | return_stmt:s {: RESULT = s; :}
+     | break_stmt:s {: RESULT = s; :}
+     | continue_stmt:s {: RESULT = s; :}
+     ;
+
+compound_stmt ::= LBRACE:b stmt_list:l RBRACE
+                  {: RESULT = new CompoundStmt(pos(bleft,bright),l); :} 
+              | LBRACE:b           RBRACE
+              	{: RESULT = new CompoundStmt(pos(bleft,bright),new StmtList(pos(bleft,bright))); :}
+              ;
+
+expr_stmt ::= expr:e SEMICOLON
+              {: RESULT = new ExprStmt(pos(eleft,eright),e); :}
+              ;
+
+selection_stmt ::= IF:f LPAREN expr:e RPAREN stmt:s
+                   {: RESULT = new IfStmt(pos(fleft,fright),e,s,null); :}
+               | IF:f LPAREN expr:e RPAREN stmt:s ELSE stmt:t
+                 {: RESULT = new IfStmt(pos(fleft,fright),e,s,t); :}
+                 ;
+
+while_stmt ::= WHILE:w LPAREN expr:e RPAREN stmt:s
+               {: RESULT = new WhileStmt(pos(wleft,wright),e,s); :}
+               ;
+
+for_stmt ::= FOR:f LPAREN expr_stmt:e expr_stmt:con expr:st RPAREN stmt:bo
+             {: RESULT = new ForStmt(pos(fleft,fright),e.getExpr(),con.getExpr(),st,bo); :}
+         | FOR:f LPAREN expr_stmt:e expr_stmt:con      RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),e.getExpr(),con.getExpr(),null,bo); :}
+         | FOR:f LPAREN expr_stmt:e SEMICOLON expr:st RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),e.getExpr(),null,st,bo); :}
+         | FOR:f LPAREN expr_stmt:e SEMICOLON      RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),e.getExpr(),null,null,bo); :}
+         | FOR:f LPAREN SEMICOLON expr_stmt:con expr:st RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),null,con.getExpr(),st,bo); :}         
+         | FOR:f LPAREN SEMICOLON expr_stmt:con      RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),null,con.getExpr(),null,bo); :}
+         | FOR:f LPAREN SEMICOLON SEMICOLON expr:st RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),null,null,st,bo); :}         
+         | FOR:f LPAREN SEMICOLON SEMICOLON      RPAREN stmt:bo
+           {: RESULT = new ForStmt(pos(fleft,fright),null,null,null,bo); :}           
+         ;
+
+return_stmt ::= RETURN:r expr:e SEMICOLON
+                {: RESULT = new ReturnStmt(pos(rleft,rright),e); :}
+                ;
+break_stmt ::= BREAK:b SEMICOLON
+               {: RESULT = new BreakStmt(pos(bleft,bright)); :}
+               ;
+continue_stmt ::= CONTINUE:c SEMICOLON
+	 			  {: RESULT = new ContinueStmt(pos(cleft,cright)); :}
+				  ;
+
+expr ::= assignment_expr:a {: RESULT = a; :};
+expr ::= expr:el COMMA assignment_expr:er
+         {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.COMMA,er); :}
+         ;
+
+assignment_expr ::= logical_or_expr:e {: RESULT = e; :};
+assignment_expr ::= unary_expr:u ASSIGN assignment_expr:e
+                    {: RESULT = new BinaryExpr(pos(uleft,uright),u,BinaryOp.ASSIGN,e); :}
+                    ;
+
+logical_or_expr ::= logical_and_expr:e {: RESULT = e; :};
+logical_or_expr ::= logical_or_expr:el OR logical_and_expr:er
+                    {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.OR,er); :}
+                    ;
+
+logical_and_expr ::= equality_expr:e {: RESULT = e; :};
+logical_and_expr ::= logical_and_expr:el AND equality_expr:er
+                    {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.AND,er); :}
+					;
+
+equality_expr ::= relational_expr:e {: RESULT = e; :};
+equality_expr ::= equality_expr:el EQ  relational_expr:er
+                  {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.EQ,er); :}
+              | equality_expr:el NEQ relational_expr:er
+                {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.NEQ,er); :}
+                ;
+
+relational_expr ::= additive_expr:e {: RESULT = e; :};
+relational_expr ::= relational_expr:el LESS       additive_expr:er
+                    {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.LESS,er); :}                    
+                | relational_expr:el LESS_EQ    additive_expr:er
+                  {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.LESS_EQ,er); :}
+                | relational_expr:el GREATER    additive_expr:er
+                  {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.GREATER,er); :}
+                | relational_expr:el GREATER_EQ additive_expr:er
+                  {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.GREATER_EQ,er); :}
+                  ;
+                
+
+additive_expr ::= mult_expr:e {: RESULT = e; :};
+additive_expr ::= additive_expr:el PLUS  mult_expr:er
+                  {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.PLUS,er); :}
+              | additive_expr:el MINUS mult_expr:er
+                {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.MINUS,er); :}
+                ;
+
+mult_expr ::= unary_expr:e {: RESULT = e; :};
+mult_expr ::= mult_expr:el MULTIPLY unary_expr:er
+              {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.MULTIPLY,er); :}
+          | mult_expr:el  DIVIDE  unary_expr:er
+            {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.DIVIDE,er); :}
+          | mult_expr:el  MODULO  unary_expr:er
+            {: RESULT = new BinaryExpr(pos(elleft,elright),el,BinaryOp.MODULO,er); :}
+            ;
+
+unary_expr ::= postfix:p
+               {: RESULT = p; :}
+           | NEW:n ID:i
+             {: RESULT = new NewRecord(pos(nleft,nright), new IdType(pos(ileft,iright),sym(i))); :}
+         
+           ;
+             
+unary_expr ::= PLUS:p  unary_expr:e
+               {: RESULT = new UnaryExpr(pos(pleft,pright),UnaryOp.PLUS,e); :}
+           | MINUS:p unary_expr:e
+             {: RESULT = new UnaryExpr(pos(pleft,pright),UnaryOp.MINUS,e); :}
+           | NOT:p   unary_expr:e
+             {: RESULT = new UnaryExpr(pos(pleft,pright),UnaryOp.NOT,e); :}
+             ;
+
+postfix ::= primary:e {: RESULT = e; :};
+postfix ::= postfix:p LBRACKET expr:e RBRACKET
+            {: RESULT = new SubscriptPostfix(pos(pleft,pright),p,e); :}
+        | postfix:p LPAREN expr:e RPAREN
+          {: RESULT = new FunctionCall(pos(pleft,pright),p,e); :}
+        | postfix:p LPAREN      RPAREN
+          {: RESULT = new FunctionCall(pos(pleft,pright),p,null); :}
+        | postfix:p DOT ID:i
+          {: RESULT = new FieldPostfix(pos(pleft,pright),p,sym(i)); :}
+          ;
+
+primary ::= ID:i
+            {: RESULT = new Id(pos(ileft,iright),sym(i)); :} 
+        | NULL:n
+          {: RESULT = new Null(pos(nleft,nright)); :}
+        | INTEGER:i
+          {: RESULT = new IntLiteral(pos(ileft,iright),i); :}
+        | CHARACTER:c
+          {: RESULT = new CharLiteral(pos(cleft,cright),c); :}
+        | STRING_LITERAL:s
+          {: RESULT = new StringLiteral(pos(sleft,sright),s); :}
+        | LPAREN expr:e RPAREN {: RESULT = new ParenExpr(pos(eleft, eright), e); :}
+        | NEW type_specifier:t LBRACKET expr:e RBRACKET
+          {: RESULT = new NewArray(pos(tleft,tright),t,e); :}
+         ;

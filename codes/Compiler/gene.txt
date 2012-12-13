@@ -1,0 +1,2286 @@
+	.text
+	.align 2
+	.globl main
+main:
+	addi $sp, $sp, -3244
+	sw $ra, 112($sp)
+	li t257, 1
+	move t258, t257
+	move t259, t257
+	sll t258, t258, 2
+	addi t258, t258, 4
+	sw t258, 0($sp)
+	jal _malloc
+	move t0, $v0
+	sw t259, 0(t0)
+	move t260, t0
+	li t261, 0
+	move t262, t261
+	sll t262, t262, 2
+	add t260, t260, t262
+	li t840, 0
+	sw t840, 4(t260)
+	sw t0, 0($sp)
+	jal getcount
+	move t1, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t2, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t3, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t4, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t5, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t6, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t7, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t8, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t9, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t10, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t11, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t12, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t13, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t14, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t15, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t16, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t17, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t18, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t19, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t20, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t21, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t22, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t23, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t24, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t25, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t26, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t27, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t28, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t29, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t30, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t31, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t32, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t33, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t34, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t35, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t36, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t37, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t38, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t39, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t40, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t41, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t42, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t43, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t44, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t45, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t46, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t47, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t48, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t49, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t50, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t51, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t52, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t53, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t54, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t55, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t56, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t57, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t58, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t59, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t60, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t61, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t62, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t63, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t64, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t65, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t66, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t67, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t68, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t69, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t70, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t71, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t72, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t73, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t74, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t75, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t76, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t77, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t78, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t79, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t80, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t81, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t82, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t83, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t84, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t85, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t86, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t87, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t88, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t89, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t90, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t91, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t92, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t93, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t94, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t95, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t96, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t97, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t98, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t99, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t100, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t101, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t102, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t103, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t104, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t105, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t106, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t107, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t108, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t109, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t110, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t111, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t112, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t113, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t114, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t115, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t116, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t117, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t118, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t119, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t120, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t121, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t122, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t123, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t124, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t125, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t126, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t127, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t128, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t129, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t130, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t131, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t132, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t133, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t134, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t135, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t136, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t137, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t138, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t139, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t140, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t141, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t142, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t143, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t144, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t145, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t146, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t147, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t148, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t149, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t150, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t151, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t152, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t153, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t154, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t155, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t156, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t157, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t158, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t159, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t160, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t161, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t162, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t163, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t164, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t165, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t166, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t167, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t168, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t169, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t170, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t171, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t172, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t173, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t174, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t175, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t176, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t177, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t178, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t179, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t180, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t181, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t182, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t183, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t184, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t185, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t186, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t187, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t188, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t189, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t190, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t191, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t192, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t193, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t194, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t195, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t196, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t197, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t198, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t199, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t200, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t201, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t202, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t203, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t204, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t205, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t206, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t207, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t208, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t209, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t210, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t211, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t212, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t213, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t214, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t215, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t216, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t217, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t218, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t219, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t220, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t221, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t222, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t223, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t224, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t225, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t226, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t227, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t228, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t229, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t230, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t231, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t232, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t233, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t234, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t235, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t236, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t237, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t238, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t239, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t240, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t241, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t242, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t243, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t244, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t245, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t246, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t247, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t248, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t249, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t250, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t251, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t252, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t253, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t254, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t255, $v0
+	sw t0, 0($sp)
+	jal getcount
+	move t256, $v0
+	sw t1, 0($sp)
+	jal printInt
+	sw t2, 0($sp)
+	jal printInt
+	sw t3, 0($sp)
+	jal printInt
+	sw t4, 0($sp)
+	jal printInt
+	sw t5, 0($sp)
+	jal printInt
+	sw t6, 0($sp)
+	jal printInt
+	sw t7, 0($sp)
+	jal printInt
+	sw t8, 0($sp)
+	jal printInt
+	sw t9, 0($sp)
+	jal printInt
+	sw t10, 0($sp)
+	jal printInt
+	sw t11, 0($sp)
+	jal printInt
+	sw t12, 0($sp)
+	jal printInt
+	sw t13, 0($sp)
+	jal printInt
+	sw t14, 0($sp)
+	jal printInt
+	sw t15, 0($sp)
+	jal printInt
+	sw t16, 0($sp)
+	jal printInt
+	sw t17, 0($sp)
+	jal printInt
+	sw t18, 0($sp)
+	jal printInt
+	sw t19, 0($sp)
+	jal printInt
+	sw t20, 0($sp)
+	jal printInt
+	sw t21, 0($sp)
+	jal printInt
+	sw t22, 0($sp)
+	jal printInt
+	sw t23, 0($sp)
+	jal printInt
+	sw t24, 0($sp)
+	jal printInt
+	sw t25, 0($sp)
+	jal printInt
+	sw t26, 0($sp)
+	jal printInt
+	sw t27, 0($sp)
+	jal printInt
+	sw t28, 0($sp)
+	jal printInt
+	sw t29, 0($sp)
+	jal printInt
+	sw t30, 0($sp)
+	jal printInt
+	sw t31, 0($sp)
+	jal printInt
+	sw t32, 0($sp)
+	jal printInt
+	sw t33, 0($sp)
+	jal printInt
+	sw t34, 0($sp)
+	jal printInt
+	sw t35, 0($sp)
+	jal printInt
+	sw t36, 0($sp)
+	jal printInt
+	sw t37, 0($sp)
+	jal printInt
+	sw t38, 0($sp)
+	jal printInt
+	sw t39, 0($sp)
+	jal printInt
+	sw t40, 0($sp)
+	jal printInt
+	sw t41, 0($sp)
+	jal printInt
+	sw t42, 0($sp)
+	jal printInt
+	sw t43, 0($sp)
+	jal printInt
+	sw t44, 0($sp)
+	jal printInt
+	sw t45, 0($sp)
+	jal printInt
+	sw t46, 0($sp)
+	jal printInt
+	sw t47, 0($sp)
+	jal printInt
+	sw t48, 0($sp)
+	jal printInt
+	sw t49, 0($sp)
+	jal printInt
+	sw t50, 0($sp)
+	jal printInt
+	sw t51, 0($sp)
+	jal printInt
+	sw t52, 0($sp)
+	jal printInt
+	sw t53, 0($sp)
+	jal printInt
+	sw t54, 0($sp)
+	jal printInt
+	sw t55, 0($sp)
+	jal printInt
+	sw t56, 0($sp)
+	jal printInt
+	sw t57, 0($sp)
+	jal printInt
+	sw t58, 0($sp)
+	jal printInt
+	sw t59, 0($sp)
+	jal printInt
+	sw t60, 0($sp)
+	jal printInt
+	sw t61, 0($sp)
+	jal printInt
+	sw t62, 0($sp)
+	jal printInt
+	sw t63, 0($sp)
+	jal printInt
+	sw t64, 0($sp)
+	jal printInt
+	sw t65, 0($sp)
+	jal printInt
+	sw t66, 0($sp)
+	jal printInt
+	sw t67, 0($sp)
+	jal printInt
+	sw t68, 0($sp)
+	jal printInt
+	sw t69, 0($sp)
+	jal printInt
+	sw t70, 0($sp)
+	jal printInt
+	sw t71, 0($sp)
+	jal printInt
+	sw t72, 0($sp)
+	jal printInt
+	sw t73, 0($sp)
+	jal printInt
+	sw t74, 0($sp)
+	jal printInt
+	sw t75, 0($sp)
+	jal printInt
+	sw t76, 0($sp)
+	jal printInt
+	sw t77, 0($sp)
+	jal printInt
+	sw t78, 0($sp)
+	jal printInt
+	sw t79, 0($sp)
+	jal printInt
+	sw t80, 0($sp)
+	jal printInt
+	sw t81, 0($sp)
+	jal printInt
+	sw t82, 0($sp)
+	jal printInt
+	sw t83, 0($sp)
+	jal printInt
+	sw t84, 0($sp)
+	jal printInt
+	sw t85, 0($sp)
+	jal printInt
+	sw t86, 0($sp)
+	jal printInt
+	sw t87, 0($sp)
+	jal printInt
+	sw t88, 0($sp)
+	jal printInt
+	sw t89, 0($sp)
+	jal printInt
+	sw t90, 0($sp)
+	jal printInt
+	sw t91, 0($sp)
+	jal printInt
+	sw t92, 0($sp)
+	jal printInt
+	sw t93, 0($sp)
+	jal printInt
+	sw t94, 0($sp)
+	jal printInt
+	sw t95, 0($sp)
+	jal printInt
+	sw t96, 0($sp)
+	jal printInt
+	sw t97, 0($sp)
+	jal printInt
+	sw t98, 0($sp)
+	jal printInt
+	sw t99, 0($sp)
+	jal printInt
+	sw t100, 0($sp)
+	jal printInt
+	sw t101, 0($sp)
+	jal printInt
+	sw t102, 0($sp)
+	jal printInt
+	sw t103, 0($sp)
+	jal printInt
+	sw t104, 0($sp)
+	jal printInt
+	sw t105, 0($sp)
+	jal printInt
+	sw t106, 0($sp)
+	jal printInt
+	sw t107, 0($sp)
+	jal printInt
+	sw t108, 0($sp)
+	jal printInt
+	sw t109, 0($sp)
+	jal printInt
+	sw t110, 0($sp)
+	jal printInt
+	sw t111, 0($sp)
+	jal printInt
+	sw t112, 0($sp)
+	jal printInt
+	sw t113, 0($sp)
+	jal printInt
+	sw t114, 0($sp)
+	jal printInt
+	sw t115, 0($sp)
+	jal printInt
+	sw t116, 0($sp)
+	jal printInt
+	sw t117, 0($sp)
+	jal printInt
+	sw t118, 0($sp)
+	jal printInt
+	sw t119, 0($sp)
+	jal printInt
+	sw t120, 0($sp)
+	jal printInt
+	sw t121, 0($sp)
+	jal printInt
+	sw t122, 0($sp)
+	jal printInt
+	sw t123, 0($sp)
+	jal printInt
+	sw t124, 0($sp)
+	jal printInt
+	sw t125, 0($sp)
+	jal printInt
+	sw t126, 0($sp)
+	jal printInt
+	sw t127, 0($sp)
+	jal printInt
+	sw t128, 0($sp)
+	jal printInt
+	sw t129, 0($sp)
+	jal printInt
+	sw t130, 0($sp)
+	jal printInt
+	sw t131, 0($sp)
+	jal printInt
+	sw t132, 0($sp)
+	jal printInt
+	sw t133, 0($sp)
+	jal printInt
+	sw t134, 0($sp)
+	jal printInt
+	sw t135, 0($sp)
+	jal printInt
+	sw t136, 0($sp)
+	jal printInt
+	sw t137, 0($sp)
+	jal printInt
+	sw t138, 0($sp)
+	jal printInt
+	sw t139, 0($sp)
+	jal printInt
+	sw t140, 0($sp)
+	jal printInt
+	sw t141, 0($sp)
+	jal printInt
+	sw t142, 0($sp)
+	jal printInt
+	sw t143, 0($sp)
+	jal printInt
+	sw t144, 0($sp)
+	jal printInt
+	sw t145, 0($sp)
+	jal printInt
+	sw t146, 0($sp)
+	jal printInt
+	sw t147, 0($sp)
+	jal printInt
+	sw t148, 0($sp)
+	jal printInt
+	sw t149, 0($sp)
+	jal printInt
+	sw t150, 0($sp)
+	jal printInt
+	sw t151, 0($sp)
+	jal printInt
+	sw t152, 0($sp)
+	jal printInt
+	sw t153, 0($sp)
+	jal printInt
+	sw t154, 0($sp)
+	jal printInt
+	sw t155, 0($sp)
+	jal printInt
+	sw t156, 0($sp)
+	jal printInt
+	sw t157, 0($sp)
+	jal printInt
+	sw t158, 0($sp)
+	jal printInt
+	sw t159, 0($sp)
+	jal printInt
+	sw t160, 0($sp)
+	jal printInt
+	sw t161, 0($sp)
+	jal printInt
+	sw t162, 0($sp)
+	jal printInt
+	sw t163, 0($sp)
+	jal printInt
+	sw t164, 0($sp)
+	jal printInt
+	sw t165, 0($sp)
+	jal printInt
+	sw t166, 0($sp)
+	jal printInt
+	sw t167, 0($sp)
+	jal printInt
+	sw t168, 0($sp)
+	jal printInt
+	sw t169, 0($sp)
+	jal printInt
+	sw t170, 0($sp)
+	jal printInt
+	sw t171, 0($sp)
+	jal printInt
+	sw t172, 0($sp)
+	jal printInt
+	sw t173, 0($sp)
+	jal printInt
+	sw t174, 0($sp)
+	jal printInt
+	sw t175, 0($sp)
+	jal printInt
+	sw t176, 0($sp)
+	jal printInt
+	sw t177, 0($sp)
+	jal printInt
+	sw t178, 0($sp)
+	jal printInt
+	sw t179, 0($sp)
+	jal printInt
+	sw t180, 0($sp)
+	jal printInt
+	sw t181, 0($sp)
+	jal printInt
+	sw t182, 0($sp)
+	jal printInt
+	sw t183, 0($sp)
+	jal printInt
+	sw t184, 0($sp)
+	jal printInt
+	sw t185, 0($sp)
+	jal printInt
+	sw t186, 0($sp)
+	jal printInt
+	sw t187, 0($sp)
+	jal printInt
+	sw t188, 0($sp)
+	jal printInt
+	sw t189, 0($sp)
+	jal printInt
+	sw t190, 0($sp)
+	jal printInt
+	sw t191, 0($sp)
+	jal printInt
+	sw t192, 0($sp)
+	jal printInt
+	sw t193, 0($sp)
+	jal printInt
+	sw t194, 0($sp)
+	jal printInt
+	sw t195, 0($sp)
+	jal printInt
+	sw t196, 0($sp)
+	jal printInt
+	sw t197, 0($sp)
+	jal printInt
+	sw t198, 0($sp)
+	jal printInt
+	sw t199, 0($sp)
+	jal printInt
+	sw t200, 0($sp)
+	jal printInt
+	sw t201, 0($sp)
+	jal printInt
+	sw t202, 0($sp)
+	jal printInt
+	sw t203, 0($sp)
+	jal printInt
+	sw t204, 0($sp)
+	jal printInt
+	sw t205, 0($sp)
+	jal printInt
+	sw t206, 0($sp)
+	jal printInt
+	sw t207, 0($sp)
+	jal printInt
+	sw t208, 0($sp)
+	jal printInt
+	sw t209, 0($sp)
+	jal printInt
+	sw t210, 0($sp)
+	jal printInt
+	sw t211, 0($sp)
+	jal printInt
+	sw t212, 0($sp)
+	jal printInt
+	sw t213, 0($sp)
+	jal printInt
+	sw t214, 0($sp)
+	jal printInt
+	sw t215, 0($sp)
+	jal printInt
+	sw t216, 0($sp)
+	jal printInt
+	sw t217, 0($sp)
+	jal printInt
+	sw t218, 0($sp)
+	jal printInt
+	sw t219, 0($sp)
+	jal printInt
+	sw t220, 0($sp)
+	jal printInt
+	sw t221, 0($sp)
+	jal printInt
+	sw t222, 0($sp)
+	jal printInt
+	sw t223, 0($sp)
+	jal printInt
+	sw t224, 0($sp)
+	jal printInt
+	sw t225, 0($sp)
+	jal printInt
+	sw t226, 0($sp)
+	jal printInt
+	sw t227, 0($sp)
+	jal printInt
+	sw t228, 0($sp)
+	jal printInt
+	sw t229, 0($sp)
+	jal printInt
+	sw t230, 0($sp)
+	jal printInt
+	sw t231, 0($sp)
+	jal printInt
+	sw t232, 0($sp)
+	jal printInt
+	sw t233, 0($sp)
+	jal printInt
+	sw t234, 0($sp)
+	jal printInt
+	sw t235, 0($sp)
+	jal printInt
+	sw t236, 0($sp)
+	jal printInt
+	sw t237, 0($sp)
+	jal printInt
+	sw t238, 0($sp)
+	jal printInt
+	sw t239, 0($sp)
+	jal printInt
+	sw t240, 0($sp)
+	jal printInt
+	sw t241, 0($sp)
+	jal printInt
+	sw t242, 0($sp)
+	jal printInt
+	sw t243, 0($sp)
+	jal printInt
+	sw t244, 0($sp)
+	jal printInt
+	sw t245, 0($sp)
+	jal printInt
+	sw t246, 0($sp)
+	jal printInt
+	sw t247, 0($sp)
+	jal printInt
+	sw t248, 0($sp)
+	jal printInt
+	sw t249, 0($sp)
+	jal printInt
+	sw t250, 0($sp)
+	jal printInt
+	sw t251, 0($sp)
+	jal printInt
+	sw t252, 0($sp)
+	jal printInt
+	sw t253, 0($sp)
+	jal printInt
+	sw t254, 0($sp)
+	jal printInt
+	sw t255, 0($sp)
+	jal printInt
+	sw t256, 0($sp)
+	jal printInt
+	la t841, _L0
+	move t519, t841
+	sw t519, 0($sp)
+	jal printString
+	sw t1, 0($sp)
+	jal printInt
+	sw t2, 0($sp)
+	jal printInt
+	sw t3, 0($sp)
+	jal printInt
+	sw t4, 0($sp)
+	jal printInt
+	sw t5, 0($sp)
+	jal printInt
+	sw t6, 0($sp)
+	jal printInt
+	sw t7, 0($sp)
+	jal printInt
+	sw t8, 0($sp)
+	jal printInt
+	sw t9, 0($sp)
+	jal printInt
+	sw t10, 0($sp)
+	jal printInt
+	sw t11, 0($sp)
+	jal printInt
+	sw t12, 0($sp)
+	jal printInt
+	sw t13, 0($sp)
+	jal printInt
+	sw t14, 0($sp)
+	jal printInt
+	sw t15, 0($sp)
+	jal printInt
+	sw t16, 0($sp)
+	jal printInt
+	sw t17, 0($sp)
+	jal printInt
+	sw t18, 0($sp)
+	jal printInt
+	sw t19, 0($sp)
+	jal printInt
+	sw t20, 0($sp)
+	jal printInt
+	sw t21, 0($sp)
+	jal printInt
+	sw t22, 0($sp)
+	jal printInt
+	sw t23, 0($sp)
+	jal printInt
+	sw t24, 0($sp)
+	jal printInt
+	sw t25, 0($sp)
+	jal printInt
+	sw t26, 0($sp)
+	jal printInt
+	sw t27, 0($sp)
+	jal printInt
+	sw t28, 0($sp)
+	jal printInt
+	sw t29, 0($sp)
+	jal printInt
+	sw t30, 0($sp)
+	jal printInt
+	sw t31, 0($sp)
+	jal printInt
+	sw t32, 0($sp)
+	jal printInt
+	sw t33, 0($sp)
+	jal printInt
+	sw t34, 0($sp)
+	jal printInt
+	sw t35, 0($sp)
+	jal printInt
+	sw t36, 0($sp)
+	jal printInt
+	sw t37, 0($sp)
+	jal printInt
+	sw t38, 0($sp)
+	jal printInt
+	sw t39, 0($sp)
+	jal printInt
+	sw t40, 0($sp)
+	jal printInt
+	sw t41, 0($sp)
+	jal printInt
+	sw t42, 0($sp)
+	jal printInt
+	sw t43, 0($sp)
+	jal printInt
+	sw t44, 0($sp)
+	jal printInt
+	sw t45, 0($sp)
+	jal printInt
+	sw t46, 0($sp)
+	jal printInt
+	sw t47, 0($sp)
+	jal printInt
+	sw t48, 0($sp)
+	jal printInt
+	sw t49, 0($sp)
+	jal printInt
+	sw t50, 0($sp)
+	jal printInt
+	sw t51, 0($sp)
+	jal printInt
+	sw t52, 0($sp)
+	jal printInt
+	sw t53, 0($sp)
+	jal printInt
+	sw t54, 0($sp)
+	jal printInt
+	sw t55, 0($sp)
+	jal printInt
+	sw t56, 0($sp)
+	jal printInt
+	sw t57, 0($sp)
+	jal printInt
+	sw t58, 0($sp)
+	jal printInt
+	sw t59, 0($sp)
+	jal printInt
+	sw t60, 0($sp)
+	jal printInt
+	sw t61, 0($sp)
+	jal printInt
+	sw t62, 0($sp)
+	jal printInt
+	sw t63, 0($sp)
+	jal printInt
+	sw t64, 0($sp)
+	jal printInt
+	sw t65, 0($sp)
+	jal printInt
+	sw t66, 0($sp)
+	jal printInt
+	sw t67, 0($sp)
+	jal printInt
+	sw t68, 0($sp)
+	jal printInt
+	sw t69, 0($sp)
+	jal printInt
+	sw t70, 0($sp)
+	jal printInt
+	sw t71, 0($sp)
+	jal printInt
+	sw t72, 0($sp)
+	jal printInt
+	sw t73, 0($sp)
+	jal printInt
+	sw t74, 0($sp)
+	jal printInt
+	sw t75, 0($sp)
+	jal printInt
+	sw t76, 0($sp)
+	jal printInt
+	sw t77, 0($sp)
+	jal printInt
+	sw t78, 0($sp)
+	jal printInt
+	sw t79, 0($sp)
+	jal printInt
+	sw t80, 0($sp)
+	jal printInt
+	sw t81, 0($sp)
+	jal printInt
+	sw t82, 0($sp)
+	jal printInt
+	sw t83, 0($sp)
+	jal printInt
+	sw t84, 0($sp)
+	jal printInt
+	sw t85, 0($sp)
+	jal printInt
+	sw t86, 0($sp)
+	jal printInt
+	sw t87, 0($sp)
+	jal printInt
+	sw t88, 0($sp)
+	jal printInt
+	sw t89, 0($sp)
+	jal printInt
+	sw t90, 0($sp)
+	jal printInt
+	sw t91, 0($sp)
+	jal printInt
+	sw t92, 0($sp)
+	jal printInt
+	sw t93, 0($sp)
+	jal printInt
+	sw t94, 0($sp)
+	jal printInt
+	sw t95, 0($sp)
+	jal printInt
+	sw t96, 0($sp)
+	jal printInt
+	sw t97, 0($sp)
+	jal printInt
+	sw t98, 0($sp)
+	jal printInt
+	sw t99, 0($sp)
+	jal printInt
+	sw t100, 0($sp)
+	jal printInt
+	sw t101, 0($sp)
+	jal printInt
+	sw t102, 0($sp)
+	jal printInt
+	sw t103, 0($sp)
+	jal printInt
+	sw t104, 0($sp)
+	jal printInt
+	sw t105, 0($sp)
+	jal printInt
+	sw t106, 0($sp)
+	jal printInt
+	sw t107, 0($sp)
+	jal printInt
+	sw t108, 0($sp)
+	jal printInt
+	sw t109, 0($sp)
+	jal printInt
+	sw t110, 0($sp)
+	jal printInt
+	sw t111, 0($sp)
+	jal printInt
+	sw t112, 0($sp)
+	jal printInt
+	sw t113, 0($sp)
+	jal printInt
+	sw t114, 0($sp)
+	jal printInt
+	sw t115, 0($sp)
+	jal printInt
+	sw t116, 0($sp)
+	jal printInt
+	sw t117, 0($sp)
+	jal printInt
+	sw t118, 0($sp)
+	jal printInt
+	sw t119, 0($sp)
+	jal printInt
+	sw t120, 0($sp)
+	jal printInt
+	sw t121, 0($sp)
+	jal printInt
+	sw t122, 0($sp)
+	jal printInt
+	sw t123, 0($sp)
+	jal printInt
+	sw t124, 0($sp)
+	jal printInt
+	sw t125, 0($sp)
+	jal printInt
+	sw t126, 0($sp)
+	jal printInt
+	sw t127, 0($sp)
+	jal printInt
+	sw t128, 0($sp)
+	jal printInt
+	sw t129, 0($sp)
+	jal printInt
+	sw t130, 0($sp)
+	jal printInt
+	sw t131, 0($sp)
+	jal printInt
+	sw t132, 0($sp)
+	jal printInt
+	sw t133, 0($sp)
+	jal printInt
+	sw t134, 0($sp)
+	jal printInt
+	sw t135, 0($sp)
+	jal printInt
+	sw t136, 0($sp)
+	jal printInt
+	sw t137, 0($sp)
+	jal printInt
+	sw t138, 0($sp)
+	jal printInt
+	sw t139, 0($sp)
+	jal printInt
+	sw t140, 0($sp)
+	jal printInt
+	sw t141, 0($sp)
+	jal printInt
+	sw t142, 0($sp)
+	jal printInt
+	sw t143, 0($sp)
+	jal printInt
+	sw t144, 0($sp)
+	jal printInt
+	sw t145, 0($sp)
+	jal printInt
+	sw t146, 0($sp)
+	jal printInt
+	sw t147, 0($sp)
+	jal printInt
+	sw t148, 0($sp)
+	jal printInt
+	sw t149, 0($sp)
+	jal printInt
+	sw t150, 0($sp)
+	jal printInt
+	sw t151, 0($sp)
+	jal printInt
+	sw t152, 0($sp)
+	jal printInt
+	sw t153, 0($sp)
+	jal printInt
+	sw t154, 0($sp)
+	jal printInt
+	sw t155, 0($sp)
+	jal printInt
+	sw t156, 0($sp)
+	jal printInt
+	sw t157, 0($sp)
+	jal printInt
+	sw t158, 0($sp)
+	jal printInt
+	sw t159, 0($sp)
+	jal printInt
+	sw t160, 0($sp)
+	jal printInt
+	sw t161, 0($sp)
+	jal printInt
+	sw t162, 0($sp)
+	jal printInt
+	sw t163, 0($sp)
+	jal printInt
+	sw t164, 0($sp)
+	jal printInt
+	sw t165, 0($sp)
+	jal printInt
+	sw t166, 0($sp)
+	jal printInt
+	sw t167, 0($sp)
+	jal printInt
+	sw t168, 0($sp)
+	jal printInt
+	sw t169, 0($sp)
+	jal printInt
+	sw t170, 0($sp)
+	jal printInt
+	sw t171, 0($sp)
+	jal printInt
+	sw t172, 0($sp)
+	jal printInt
+	sw t173, 0($sp)
+	jal printInt
+	sw t174, 0($sp)
+	jal printInt
+	sw t175, 0($sp)
+	jal printInt
+	sw t176, 0($sp)
+	jal printInt
+	sw t177, 0($sp)
+	jal printInt
+	sw t178, 0($sp)
+	jal printInt
+	sw t179, 0($sp)
+	jal printInt
+	sw t180, 0($sp)
+	jal printInt
+	sw t181, 0($sp)
+	jal printInt
+	sw t182, 0($sp)
+	jal printInt
+	sw t183, 0($sp)
+	jal printInt
+	sw t184, 0($sp)
+	jal printInt
+	sw t185, 0($sp)
+	jal printInt
+	sw t186, 0($sp)
+	jal printInt
+	sw t187, 0($sp)
+	jal printInt
+	sw t188, 0($sp)
+	jal printInt
+	sw t189, 0($sp)
+	jal printInt
+	sw t190, 0($sp)
+	jal printInt
+	sw t191, 0($sp)
+	jal printInt
+	sw t192, 0($sp)
+	jal printInt
+	sw t193, 0($sp)
+	jal printInt
+	sw t194, 0($sp)
+	jal printInt
+	sw t195, 0($sp)
+	jal printInt
+	sw t196, 0($sp)
+	jal printInt
+	sw t197, 0($sp)
+	jal printInt
+	sw t198, 0($sp)
+	jal printInt
+	sw t199, 0($sp)
+	jal printInt
+	sw t200, 0($sp)
+	jal printInt
+	sw t201, 0($sp)
+	jal printInt
+	sw t202, 0($sp)
+	jal printInt
+	sw t203, 0($sp)
+	jal printInt
+	sw t204, 0($sp)
+	jal printInt
+	sw t205, 0($sp)
+	jal printInt
+	sw t206, 0($sp)
+	jal printInt
+	sw t207, 0($sp)
+	jal printInt
+	sw t208, 0($sp)
+	jal printInt
+	sw t209, 0($sp)
+	jal printInt
+	sw t210, 0($sp)
+	jal printInt
+	sw t211, 0($sp)
+	jal printInt
+	sw t212, 0($sp)
+	jal printInt
+	sw t213, 0($sp)
+	jal printInt
+	sw t214, 0($sp)
+	jal printInt
+	sw t215, 0($sp)
+	jal printInt
+	sw t216, 0($sp)
+	jal printInt
+	sw t217, 0($sp)
+	jal printInt
+	sw t218, 0($sp)
+	jal printInt
+	sw t219, 0($sp)
+	jal printInt
+	sw t220, 0($sp)
+	jal printInt
+	sw t221, 0($sp)
+	jal printInt
+	sw t222, 0($sp)
+	jal printInt
+	sw t223, 0($sp)
+	jal printInt
+	sw t224, 0($sp)
+	jal printInt
+	sw t225, 0($sp)
+	jal printInt
+	sw t226, 0($sp)
+	jal printInt
+	sw t227, 0($sp)
+	jal printInt
+	sw t228, 0($sp)
+	jal printInt
+	sw t229, 0($sp)
+	jal printInt
+	sw t230, 0($sp)
+	jal printInt
+	sw t231, 0($sp)
+	jal printInt
+	sw t232, 0($sp)
+	jal printInt
+	sw t233, 0($sp)
+	jal printInt
+	sw t234, 0($sp)
+	jal printInt
+	sw t235, 0($sp)
+	jal printInt
+	sw t236, 0($sp)
+	jal printInt
+	sw t237, 0($sp)
+	jal printInt
+	sw t238, 0($sp)
+	jal printInt
+	sw t239, 0($sp)
+	jal printInt
+	sw t240, 0($sp)
+	jal printInt
+	sw t241, 0($sp)
+	jal printInt
+	sw t242, 0($sp)
+	jal printInt
+	sw t243, 0($sp)
+	jal printInt
+	sw t244, 0($sp)
+	jal printInt
+	sw t245, 0($sp)
+	jal printInt
+	sw t246, 0($sp)
+	jal printInt
+	sw t247, 0($sp)
+	jal printInt
+	sw t248, 0($sp)
+	jal printInt
+	sw t249, 0($sp)
+	jal printInt
+	sw t250, 0($sp)
+	jal printInt
+	sw t251, 0($sp)
+	jal printInt
+	sw t252, 0($sp)
+	jal printInt
+	sw t253, 0($sp)
+	jal printInt
+	sw t254, 0($sp)
+	jal printInt
+	sw t255, 0($sp)
+	jal printInt
+	sw t256, 0($sp)
+	jal printInt
+	la t842, _L1
+	move t777, t842
+	sw t777, 0($sp)
+	jal printString
+	lw $ra, 112($sp)
+	addi $sp, $sp, 3244
+	jr $ra
+getcount:
+	addi $sp, $sp, -176
+	sw $ra, 112($sp)
+	lw t843, 176($sp)
+	move t779, t843
+	move t780, t779
+	li t781, 0
+	move t782, t781
+	sll t782, t782, 2
+	add t780, t780, t782
+	move t783, t779
+	li t784, 0
+	move t785, t784
+	sll t785, t785, 2
+	add t783, t783, t785
+	lw t844, 4(t783)
+	li t845, 1
+	add t786, t844, t845
+	sw t786, 4(t780)
+	move t787, t779
+	li t788, 0
+	move t789, t788
+	sll t789, t789, 2
+	add t787, t787, t789
+	lw t846, 4(t787)
+	move $v0, t846
+	lw $ra, 112($sp)
+	addi $sp, $sp, 176
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 176
+	jr $ra
+substring:
+	addi $sp, $sp, -196
+	sw $ra, 112($sp)
+	lw t847, 196($sp)
+	move t790, t847
+	lw t848, 200($sp)
+	move t791, t848
+	lw t849, 204($sp)
+	move t792, t849
+	la t850, _L2
+	move t794, t850
+	move t795, t790
+	move t796, t791
+	add t795, t795, t796
+	lb t851, 0(t795)
+	move t798, t851
+	sw t798, 0($sp)
+	jal _charToString
+	move t797, $v0
+	sw t794, 0($sp)
+	sw t797, 4($sp)
+	jal _strcat
+	move t794, $v0
+	#FOR   :: DEBUG
+	addi t793, t791, 1
+_L3:
+	add t799, t791, t792
+	bge t793, t799, _L5
+_L4:
+	move t800, t790
+	move t801, t793
+	add t800, t800, t801
+	lb t852, 0(t800)
+	move t803, t852
+	sw t803, 0($sp)
+	jal _charToString
+	move t802, $v0
+	sw t794, 0($sp)
+	sw t802, 4($sp)
+	jal _strcat
+	move t794, $v0
+	addi t793, t793, 1
+	j _L3
+_L5:
+	move $v0, t794
+	lw $ra, 112($sp)
+	addi $sp, $sp, 196
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 196
+	jr $ra
+readString:
+	addi $sp, $sp, -200
+	sw $ra, 112($sp)
+	la t853, _L2
+	move t805, t853
+	jal readChar
+	move t804, $v0
+	#WHILE   :: DEBUG
+_L6:
+	li t854, 32
+	seq t808, t804, t854
+	bnez t808, _L11	li t855, 10
+	seq t809, t804, t855
+	li t807, 0
+	beqz t809, _L12
+_L11:
+	li t807, 1
+_L12:
+	bnez t807, _L9	li t856, 9
+	seq t810, t804, t856
+	li t806, 0
+	beqz t810, _L10
+_L9:
+	li t806, 1
+_L10:
+	beqz t806, _L8
+_L7:
+	jal readChar
+	move t804, $v0
+	j _L6
+_L8:
+	sw t804, 0($sp)
+	jal _charToString
+	move t811, $v0
+	sw t805, 0($sp)
+	sw t811, 4($sp)
+	jal _strcat
+	move t805, $v0
+	jal readChar
+	move t804, $v0
+	#WHILE   :: DEBUG
+_L13:
+	li t857, 32
+	sne t814, t804, t857
+	beqz t814, _L18
+	li t858, 10
+	sne t815, t804, t858
+	li t813, 1
+	bnez t815, _L19_L18:
+	li t813, 0
+_L19:
+	beqz t813, _L16
+	li t859, 9
+	sne t816, t804, t859
+	li t812, 1
+	bnez t816, _L17_L16:
+	li t812, 0
+_L17:
+	beqz t812, _L15
+_L14:
+	sw t804, 0($sp)
+	jal _charToString
+	move t817, $v0
+	sw t805, 0($sp)
+	sw t817, 4($sp)
+	jal _strcat
+	move t805, $v0
+	jal readChar
+	move t804, $v0
+	j _L13
+_L15:
+	move $v0, t805
+	lw $ra, 112($sp)
+	addi $sp, $sp, 200
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 200
+	jr $ra
+readLine:
+	addi $sp, $sp, -156
+	sw $ra, 112($sp)
+	jal readChar
+	move t819, $v0
+	#WHILE   :: DEBUG
+_L20:
+	li t860, 10
+	seq t820, t819, t860
+	beqz t820, _L22
+_L21:
+	jal readChar
+	move t819, $v0
+	j _L20
+_L22:
+	la t861, _L2
+	move t821, t861
+	sw t819, 0($sp)
+	jal _charToString
+	move t822, $v0
+	sw t821, 0($sp)
+	sw t822, 4($sp)
+	jal _strcat
+	move t818, $v0
+	#WHILE   :: DEBUG
+_L23:
+	li t862, 10
+	sne t823, t819, t862
+	beqz t823, _L25
+_L24:
+	sw t819, 0($sp)
+	jal _charToString
+	move t824, $v0
+	sw t818, 0($sp)
+	sw t824, 4($sp)
+	jal _strcat
+	move t818, $v0
+	j _L23
+_L25:
+	move $v0, t818
+	lw $ra, 112($sp)
+	addi $sp, $sp, 156
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 156
+	jr $ra
+parseInt:
+	addi $sp, $sp, -172
+	sw $ra, 112($sp)
+	lw t863, 172($sp)
+	move t825, t863
+	li t826, 0
+	#FOR   :: DEBUG
+	li t827, 0
+_L26:
+	sw t825, 0($sp)
+	jal _strlen
+	move t828, $v0
+	bge t827, t828, _L28
+_L27:
+	li t864, 10
+	mul t829, t826, t864
+	move t830, t825
+	move t831, t827
+	add t830, t830, t831
+	lb t865, 0(t830)
+	move t832, t865
+	sw t832, 0($sp)
+	jal ord
+	move t833, $v0
+	add t834, t829, t833
+	li t866, 48
+	sub t826, t834, t866
+	addi t827, t827, 1
+	j _L26
+_L28:
+	move $v0, t826
+	lw $ra, 112($sp)
+	addi $sp, $sp, 172
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 172
+	jr $ra
+fillIntArray:
+	addi $sp, $sp, -152
+	sw $ra, 112($sp)
+	lw t867, 152($sp)
+	move t835, t867
+	lw t868, 156($sp)
+	move t836, t868
+	#FOR   :: DEBUG
+	li t837, 0
+_L29:
+	lw t869, 0(t835)
+	bge t837, t869, _L31
+_L30:
+	move t838, t835
+	move t839, t837
+	sll t839, t839, 2
+	add t838, t838, t839
+	sw t836, 4(t838)
+	addi t837, t837, 1
+	j _L29
+_L31:
+	li t870, 1
+	move $v0, t870
+	lw $ra, 112($sp)
+	addi $sp, $sp, 152
+	jr $ra
+	lw $ra, 112($sp)
+	addi $sp, $sp, 152
+	jr $ra
+native:
+_malloc:  				#done
+    lw $a0, 0($sp)
+    li $v0, 9
+    syscall
+    jr $ra
+
+_strcmp:   			#done t0<t1 r -1 t0=t1 r 0 t0>t1 r 1
+    lw $t0, 0($sp)
+    lw $t1, 4($sp)
+_strcmp_begin:
+    lb $t2, 0($t0)
+    lb $t3, 0($t1)
+    blt $t2, $t3, _strcmp_less
+    bgt $t2, $t3, _strcmp_greater
+    beq $t2, $zero, _strcmp_equal
+    addi $t0, $t0, 1
+    addi $t1, $t1, 1
+    j _strcmp_begin
+_strcmp_less:				
+    li $v0, -1
+    jr $ra
+_strcmp_greater:
+    li $v0, 1
+    jr $ra
+_strcmp_equal:
+    li $v0, 0
+    jr $ra
+
+_intToString:			#done
+    lw $t0, 0($sp)
+    li $t1, 0
+    bge $t0, $zero, intToString_l1
+    li $t1, 1
+    neg $t0, $t0
+intToString_l1:
+    move $t3, $t0
+    li $t2, 0
+intToString_l2:
+    addi $t2, $t2, 1
+    div $t3, $t3, 10
+    bne $t3, $zero, intToString_l2
+    addi $a0, $t2, 1
+    beq $t1, $zero, intToString_l3
+    addi $a0, $a0, 1
+intToString_l3:
+    li $v0, 9
+    move $t3, $a0
+    syscall
+    beq $t1, $zero, intToString_l5
+    li $t4, 45
+    sb $t4, 0($v0)
+intToString_l5:
+    add $t3, $v0, $t3
+    addi $t3, $t3, -1
+    sb $zero, 0($t3)    
+    addi $t3, $t3, -1
+intToString_l4:
+    rem $t4, $t0, 10
+    addi $t4, $t4, 48
+    sb $t4, 0($t3)
+    addi $t3, $t3, -1
+    div $t0, $t0, 10
+    bne $t0, $zero, intToString_l4
+    jr $ra
+
+_charToString: 		#done
+    li $a0, 2
+    li $v0, 9
+    syscall
+    lb $t0, 0($sp)
+    sb $t0, 0($v0)
+    sb $zero, 1($v0)
+    jr $ra
+
+_strlen:
+    lw $t0, 0($sp)
+    li $v0, 0
+_strlen_begin:
+    lb $t1, 0($t0)
+    beq $t1, $zero, _strlen_end
+    addi $t0, $t0, 1
+    addi $v0, $v0, 1
+    j _strlen_begin
+_strlen_end:
+    jr $ra
+
+_strcat:			#done  t0.t1
+    lw $t0, 0($sp)
+    move $t7, $t0
+    lw $t6, 4($sp)
+    addi $sp, $sp, -8
+    sw $ra, 4($sp)	#aa
+    sw $t0, 0($sp)	#aa
+    jal _strlen
+    move $t2, $v0
+    move $t1, $t6
+    sw $t1, 0($sp)  #aa
+    jal _strlen
+    move $t1, $t6
+    move $t3, $v0
+    add $a0, $t2, $t3
+    addi $a0, $a0, 1
+    li $v0,9
+    syscall
+    move $t1, $t6
+	move $t0, $t7
+    move $t5, $v0
+_strcat_l1:
+    lb $t4, 0($t0)
+    beq $t4, $zero, _strcat_l2
+    sb $t4, 0($t5)
+    addi $t0, $t0, 1
+    addi $t5, $t5, 1
+    j _strcat_l1
+_strcat_l2:
+    lb $t4, 0($t1)
+    beq $t4, $zero, _strcat_l3
+    sb $t4, 0($t5)
+    addi $t1, $t1, 1
+    addi $t5, $t5, 1	#wrong
+    j _strcat_l2
+_strcat_l3:
+    sb $zero, 0($t5)
+    lw $ra, 4($sp)	#myself
+    addi $sp, $sp, 8
+    jr $ra
+
+readInt:			#done
+    li $v0, 5
+    syscall
+    jr $ra
+
+readChar:			#done
+    li $v0, 8
+    move $a0, $sp
+    li $a1, 2
+    syscall
+    lb $v0, 0($sp)
+    jr $ra
+
+printInt:			#done
+    li $v0, 1
+    lw $a0, 0($sp)
+    syscall
+    jr $ra
+
+printChar:			#done
+    sb $zero, 1($sp)
+    li $v0, 4
+    move $a0, $sp
+    syscall
+    jr $ra
+
+printString:		#done
+    lw $a0, 0($sp)
+    li $v0, 4
+    syscall
+    jr $ra
+
+printLine:			#done
+    lw $a0, 0($sp)
+    li $v0, 4
+    syscall
+    li $t0, 10
+    sb $t0, 0($sp)
+    sb $zero, 1($sp)
+    li $v0, 4
+    move $a0, $sp
+    syscall
+    jr $ra
+
+ord:		#myself
+	lb	$v0 0($sp)
+	jr $ra
+
+chr: 		#myself
+	lb	$v0 0($sp)
+	jr $ra
+
+	.data
+_L2:
+	.asciiz ""
+_L0:
+	.asciiz "
+"
+_L1:
+	.asciiz "end"
