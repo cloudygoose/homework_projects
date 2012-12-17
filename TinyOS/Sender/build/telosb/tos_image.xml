@@ -1,11 +1,11 @@
 <tos_image>
   <ident>
-    <uidhash>BACEFF1DL</uidhash>
-    <hostname>ubuntu</hostname>
-    <username>wsn</username>
+    <uidhash>DBDC4EAFL</uidhash>
+    <hostname>cloudygoose-Thi</hostname>
+    <username>cloudygoose</username>
     <appname>SenderAppC</appname>
-    <userhash>B7C01525L</userhash>
-    <timestamp>4E831667L</timestamp>
+    <userhash>E14EED0DL</userhash>
+    <timestamp>50CA8ECDL</timestamp>
     <deluge_support>no</deluge_support>
     <platform>telosb</platform>
   </ident>
