@@ -947,14 +947,15 @@ static inline void TOSH_MAKE_FLASH_CS_OUTPUT()  ;
 static inline void TOSH_SET_FLASH_HOLD_PIN()  ;
 #line 89
 static inline void TOSH_MAKE_FLASH_HOLD_OUTPUT()  ;
-# 6 "TempRadio.h"
+# 7 "TempRadio.h"
 #line 4
 typedef nx_struct temperature_msg {
+  nx_uint16_t nodeid;
   nx_uint16_t temperature;
 } __attribute__((packed)) temperature_msg_t;
 
 enum __nesc_unnamed4260 {
-#line 8
+#line 9
   AM_TEMPERATURE_MSG
 };
 # 32 "/opt/tinyos-2.1.1/tos/types/Leds.h"
@@ -2790,7 +2791,7 @@ static void CC2420SpiP__grant__runTask(void );
 # 45 "/opt/tinyos-2.1.1/tos/chips/cc2420/interfaces/CC2420Strobe.nc"
 static cc2420_status_t CC2420SpiP__Strobe__strobe(
 # 49 "/opt/tinyos-2.1.1/tos/chips/cc2420/spi/CC2420SpiP.nc"
-uint8_t arg_0x40b30200);
+uint8_t arg_0x40b2f200);
 # 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
 static error_t StateImplP__Init__init(void );
 # 56 "/opt/tinyos-2.1.1/tos/interfaces/State.nc"

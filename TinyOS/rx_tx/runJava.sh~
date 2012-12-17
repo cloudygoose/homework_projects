@@ -1,6 +1,14 @@
 #!/bin/bash
 #
+if [ -z $1 ]
+then
+	yourid='0' 
+else 
+	yourid=$1 
+fi
 echo running java
-echo java net.tinyos.tools.Listen –comm 'serial@/dev/ttyUSB0:telosb'
-java net.tinyos.tools.Listen -comm serial@/dev/ttyUSB0:telosb
+echo java net.tinyos.tools.Listen –comm serial@/dev/ttyUSB$yourid:telosb
+sudo chmod 777 /dev/ttyUSB$yourid
+javac Displayer.java
+java net.tinyos.tools.Listen -comm serial@/dev/ttyUSB$yourid:telosb | java Displayer
 echo 'exit'

@@ -1,6 +1,6 @@
 #include "TempRadio.h"
 
-module ReceiverC {
+module RxtxC {
 
 	uses {
 		interface Boot;
