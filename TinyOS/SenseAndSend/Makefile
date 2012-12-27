@@ -1,2 +1,0 @@
-COMPONENT=SenseC
-include $(MAKERULES)
